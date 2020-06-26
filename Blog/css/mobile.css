@@ -1,0 +1,13 @@
+
+.logo {
+ font-size: 2.5rem;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+}
+/* .divVideo {
+    width: 170px; 
+    height: 200px;
+} */

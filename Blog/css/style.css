@@ -1,0 +1,251 @@
+/* nu uitati de border box. daca elementul vostru are dimensiuni fixe (ex: with: 400px, height: 400px)
+atunci padding-ul si border-ul nu vor creste dimensiunile lui, ci se vor adauga in interiorul elementului */
+
+* {
+    box-sizing: border-box;
+}
+/* se poate folosi si varianta cu * sau direct in body */
+
+body {
+    width: 100%;
+	height: 100%;
+    /* unele browsere au margin si padding predefinit si ne-ar putea incurca */
+    margin: 0;
+    padding: 0;
+    /* Aceste setari de mai sus se fac tot timpul */
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1499416019036-fe88610601ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=950&q=80');
+    /* cover inseamna ca imaginea va ocupa fundalul intregului element (aici body)*/
+    background-size: cover;
+    line-height: 1,2rem;
+}
+
+/* HEADER */
+
+header{
+    /* display flex pentru a aranja elemente intr-un container */
+	/* row nowrap => elementele asezate pe orizontala, daca e prea putin spatiu NU trec pe randul urmator*/
+	display: flex;
+	flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:  center;
+    /* deci 10 vh e 10% */
+	min-height: 10vh;
+    background-color: white;   
+}
+/* Logo-ul */
+header h1{
+    font-size: 3rem;
+	margin: 0.5em 0.2em;
+}
+
+header .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    padding: 1rem 1.5rem;
+}
+header .img-wraper {
+    display: flex;
+	align-items: center;
+    width: 6.30rem;
+    height: auto;
+}
+/* Animatii(Tranzitii) */
+header .img-wraper img {
+    transition: all 1s;
+}
+header .img-wraper img:hover {
+    transform: scale(1.1);
+}
+
+/* SEARCH BAR-ul */
+
+header .search{
+    display: flex;
+	justify-content: flex-end;
+	margin: 0 0.5rem;
+    padding:  0.1rem 1.5rem;
+}
+header .search input {
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: solid 2px black;
+    border-radius: 1.25rem;
+    color: #37a08e;
+}
+header .search input::placeholder { 
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: black;
+}
+header .lupa {
+    text-decoration: none;
+    color: #7E9F35;
+    margin: 0 0.5rem;
+    /* padding: 0.2rem; */
+}
+header .lupa:hover {
+    color: #37a08e;
+}
+/* @media screen and (max-device-width: 480px) and (orientation:portrait) { */
+	/* ATENTIE! media queries-urile se pun DUPA ce am definit proprietatile principale de CSS
+	ele suprascriu proprietatile de dinainte, pentru device-ul corespunzator(aici e vorba de un telefon
+	cu 480px pe latime la orientare portrait) */
+	/* header h1 {
+		font-size: 2rem;
+	}
+} */
+
+/* NAVIGATOR */
+nav ul {
+    /* pentru a scapa de bulinele din lista */
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    display: row nowrap;
+    justify-content: space-around;
+}
+nav li {
+    /* 1rem (sau em) este 16px (in broawser, ) */
+    font-size: 1.3rem;
+	padding: 1em;
+    background-color: #7E9F35;
+    width: 33.33%; 
+    text-align: center;
+}
+nav a{
+    color: white;
+    /* pentru a nu mai fi link-urile subliniate */
+    text-decoration: none;
+}
+nav li:hover {
+	background-color: #37a08e;
+}
+
+/* MAIN */
+main {
+    background-color: #f4f4f4;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* 1erm  sus-jos 2rem este staga dreapta  sau putem pune 4 valori sus jos stanga dreapta*/
+    padding: 1rem 2.5rem;
+    font-size: 1,2rem;
+}
+main h1, h2 {
+	font-size: 1.8rem;
+}
+article p {
+    /* este un TAB de dim 3erm */
+    text-indent: 3rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+/* #container{
+    max-width: 60rem;
+    margin: 30px auto;
+} */
+
+.divVideo{
+    padding: 1rem;
+    text-align: center;
+    /* max-width: 36rem; */
+}
+
+.divFeedback {
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    max-height: 60rem;
+    max-width: 38rem;
+    margin:  2rem auto;
+    background: #f4f4f4;
+    color: #333;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(219, 23, 23, 0.26);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.26);
+    font-family: 'Raleway', sans-serif;
+}
+.divFeedback h2,
+.divFeedback p {
+    text-align: center;
+}
+.divFeedback .form-group label {
+    display: block;
+    color: #666;
+}
+.divFeedback .form-group input {
+    width: 100%;
+    padding: 0.65rem;
+    border: #ddd 1px solid; 
+    border-radius: 5px;
+    /* INTREBARE input de ce depaseste continutul albastru */
+}
+
+.divFeedback button {
+    display: block;
+    width: 100%;
+    background: #49c1a2;
+    color: #fff;
+    padding: 0.65rem;
+    margin-top: 1.2rem;
+    cursor: pointer;
+}
+.divFeedback button:hover{
+    background: #37a08e;
+}
+
+/* Grid pentru footer in loc de busstrap */
+
+
+/* FOOTER */
+footer {
+	/* grid: trebuie sa facem impartire pe coloane si pe linii*/
+	display: grid;
+	/* 12 coloane egale ca dimensiune */
+	grid-template-columns: repeat(12, 1fr);
+	/* 4 lnii egale ca dimensiune */
+	grid-template-rows: repeat(4, 1fr);
+}
+
+footer {
+	background-color: #666;
+}
+
+footer img {
+	width: 20px;
+	height: 20px;
+
+}
+
+footer .contact {
+	display: flex;
+	flex-flow: column nowrap;
+	/* daca avem 4 randuri, primul e de la pozitia 1 la pozitia 2, iar ultimul incepe 
+	la pozitia 4 si se termina la pozitia 5 */
+	/* analog si la coloane */
+	/* contact-ul e plasat de pozitia 1 la pozitia 4, in ceea ce priveste impartirea pe randuri*/
+	/* adica la grid row, in stanga /-ului e pozitia de inceput, iar in drepata pozitia de sfarsit*/
+	/* practic, va ocupa 3/4 din inaltimea footerului (height-ul)*/
+	grid-row: 1 / 4;
+	/* pentru coloane, analog, de la pozitia 2, pana la pozitia 6 */
+	/* pozitiile pe coloane incep la 1 si se termina la 13, asadar contactul va fi in partea
+	dreapta stanga a contactului */
+	grid-column: 2 / 6;
+}
+
+footer .social-media {
+	display: flex;
+	flex-flow: column nowrap;
+	grid-row: 1 / 4;
+	grid-column: 8/ 12;
+}
+
+footer #copyright {
+	text-align: center;
+	grid-row: 4 / 5;
+	grid-column: 4 / 10;
+}
+

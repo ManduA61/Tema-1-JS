@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+
+    background-image: url('https://images.unsplash.com/photo-1445307806294-bff7f67ff225?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80');
+    background-size: cover;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    background-color: white;   
+}
+header .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    padding: 1rem 1.5rem;
+}
+header img {
+    width: 6.30rem;
+    height: auto;
+}
+header .search{
+    padding:  1rem 1.5rem;
+}
+header input {
+    border-radius: 15px;
+    padding: 0.3rem;
+}
+header input::placeholder { 
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: teal;
+}
+/* header button{
+    border-radius: 40px;
+    padding: 0.3rem;
+} */
+
+/* NAVIGATOT */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+
+}
+nav li {
+    background-color: #7E9F35;
+    width: 100%; 
+    /* text-align: center; */
+    justify-content: flex-start;
+    padding: 10px 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    /* 1rem (sau em) este 16px (in broawser, ) */
+    font-size: 1.5rem; 
+}
+
+header .lupa {
+    text-decoration: none;
+    color: #7E9F35;
+    margin: 0 0.5rem;
+    /* padding: 0.2rem; */
+}
+header .lupa:hover {
+    color: #37a08e;
+}
+
+/* MAIN */
+main {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* 1erm  sus-jos 2rem este staga dreapta  sau putem pune 4 valori sus jos stanga dreapta*/
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+}
+main h1 {
+    font-family: 'Indie Flower', cursive;
+}
+h2 {
+    font-family: 'Indie Flower', cursive;
+}
+main p {
+    text-indent: 3rem;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* FOOTER */
+footer {
+	/* grid: trebuie sa facem impartire pe coloane si pe linii*/
+	display: grid;
+	/* 12 coloane egale ca dimensiune */
+	grid-template-columns: repeat(12, 1fr);
+	/* 4 lnii egale ca dimensiune */
+	grid-template-rows: repeat(4, 1fr);
+}
+
+footer {
+	background-color: #666;
+}
+
+footer img {
+	width: 20px;
+	height: 20px;
+
+}
+
+footer .contact {
+	display: flex;
+	flex-flow: column nowrap;
+	/* daca avem 4 randuri, primul e de la pozitia 1 la pozitia 2, iar ultimul incepe 
+	la pozitia 4 si se termina la pozitia 5 */
+	/* analog si la coloane */
+	/* contact-ul e plasat de pozitia 1 la pozitia 4, in ceea ce priveste impartirea pe randuri*/
+	/* adica la grid row, in stanga /-ului e pozitia de inceput, iar in drepata pozitia de sfarsit*/
+	/* practic, va ocupa 3/4 din inaltimea footerului (height-ul)*/
+	grid-row: 1 / 4;
+	/* pentru coloane, analog, de la pozitia 2, pana la pozitia 6 */
+	/* pozitiile pe coloane incep la 1 si se termina la 13, asadar contactul va fi in partea
+	dreapta stanga a contactului */
+	grid-column: 2 / 6;
+}
+
+footer .social-media {
+	display: flex;
+	flex-flow: column nowrap;
+	grid-row: 1 / 4;
+	grid-column: 8/ 12;
+}
+
+footer #copyright {
+	text-align: center;
+	grid-row: 4 / 5;
+	grid-column: 4 / 10;
+}

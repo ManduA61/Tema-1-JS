@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>My blog</title>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <div class="titleLogo"><h1>MAM's blog </h1></div>
+        <div class="img-wraper">
+          <img src="imagini/logo.jpg" alt="logo">
+          <!-- Se poate si imaginea de pe NET -->
+          <!-- <img src="https://i.pinimg.com/originals/38/56/fb/3856fb5cebae7caea3e05ccb3a5a26eb.png" alt="lifeStyle"> -->
+        </div> 
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search">
+        <a class="lupa" href="#"><i class="fas fa-search fa-4x"></i></a>     
+      </div>
+    </header>
+
+    <nav id="navMob">
+      <!-- unordered list -->
+        <ul> 
+          <!-- list item -->
+          <li><a href="fit.html">Fitness</a></li>
+          <li><a href="hiking.html">Hiking</a></li>
+          <li><a href="run.html">Running</a></li>
+        </ul>
+      </nav>
+
+    <main>
+      <!-- <div id="container"> -->
+        <h2>Bine ai venit pe blogul meu!</h2>
+        <article>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, ad harum facere nulla modi nesciunt alias temporibus ipsum aut magni error repellat placeat deserunt fugit quasi necessitatibus rerum facilis fugiat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium animi eos nostrum debitis ex, nulla officiis veniam molestias perspiciatis quisquam dolor repellat, reiciendis vel doloremque tempore, cum qui aspernatur?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fugit labore nobis, dignissimos eveniet iusto explicabo recusandae earum perferendis beatae itaque laboriosam natus voluptatum error ad eos cumque corporis possimus.</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus corporis ullam quos! Suscipit voluptates deleniti explicabo ipsa voluptas perferendis alias quas veritatis adipisci doloribus, quam provident. Aperiam accusamus aut voluptatibus?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quae officiis odit soluta nisi at! Impedit porro officiis voluptatem quis eveniet aperiam quam quo, quod natus vero, nam consequuntur!</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, ad harum facere nulla modi nesciunt alias temporibus ipsum aut magni error repellat placeat deserunt fugit quasi necessitatibus rerum facilis fugiat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium animi eos nostrum debitis ex, nulla officiis veniam molestias perspiciatis quisquam dolor repellat, reiciendis vel doloremque tempore, cum qui aspernatur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fugit labore nobis, dignissimos eveniet iusto explicabo recusandae earum perferendis beatae itaque laboriosam natus voluptatum error ad eos cumque corporis possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus corporis ullam quos! Suscipit voluptates deleniti explicabo ipsa voluptas perferendis alias quas veritatis adipisci doloribus, quam provident. Aperiam accusamus aut voluptatibus?. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quae officiis odit soluta nisi at! Impedit porro officiis voluptatem quis eveniet aperiam quam quo, quod natus vero, nam consequuntur!</p>
+        </article>
+
+        <h2>Lifestyle pe înțelesul tuturor</h2>
+        <div class="divVideo">
+          <iframe width="610" height="350" src="https://www.youtube.com/embed/Hjl7ePGZkUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="divFeedback">
+          <h2>Ajută-mă cu un feedback:</h2>
+          <p>Durează câteva minute</p>
+            <form>
+              <div class="form-group">
+              <label for="name">Nume</label>
+              <input type="text" name="name" id="name" placeholder="Nume familie" required>
+              <!-- required = formularul nu poate fi trimis fara a fi pusa o valoare in acel camp -->
+              </div>
+              <div class="form-group">
+              <label for="secondName">Prenume</label>
+              <input type="text" name="secondName" id="secondName" placeholder="Prenume" required>
+              </div>
+              <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="e-mail" required>
+              </div>
+              <div class="form-group">
+                <label for="age">Vârstă:</label>
+                <input type="number" name="age" id="age">
+              </div>
+              <div class="form-group">
+                <label for="birthdate">Data nașterii:</label>
+                <input type="date" name="birthdate" id="birthdate">
+              </div>
+              <div class="form-group">
+                <label for="sex">Gen:</label>
+                <select name="sex" id="sex">
+                  <option value="male">Barbat</option>
+                  <option value="female">Femeie</option>
+                  <option value="others" selected >Altceva</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Lasă un mesaj:</label><br>
+                <textarea name="message" id="message" cols="18" rows="8"></textarea>
+                <!-- Pentru a fi reponsive pe telefoane:-->
+                <!-- Cele mai mici 3.2" - 3.5" este de 320x480 (2008 >) -->
+                <!-- Iar pt tel de 4" - 5" este de 480x800-->
+                <!-- Iar pt tel de 4.8" - 7" este de 1280x800 (HD)-->
+                <!-- Iar pt tel de 5" - 32" este de 1920x1080 (FulHD)-->
+                <!-- Iar pt Iphone 6/7/8 este de 375x667-->
+              </div>
+
+              <div class="form-group2">
+                <label for="membership">Membru:</label>
+                <input type="radio" name="membership" id="membership" value="simple" checked >Simplu
+                <input type="radio" name="membership" id="membership" value="standard">Standard
+                <input type="radio" name="membership" id="membership" value="premium">Premium
+              </div>
+              <div class="form-group2">
+                <label for="membership">Categorie:</label>
+                <input type="checkbox" name="likes" id="likes" value="hiking">Hiking
+                <input type="checkbox" name="likes" id="likes" value="running">Running
+                <input type="checkbox" name="likes" id="likes" value="fitness">Fitness
+              </div>
+              <!--<input type="submit" name="submit" value="Trimite">-->
+              <button type="submit" class="btn">Trimite</button>
+              <button type="reset" class="btn">Reset</button>
+            </form>
+        </div>
+      <!-- </div> -->
+    </main>
+    <footer>
+      <div class="contact">
+        <h2 >Contact:</h2>
+        <p id="email"><strong>Email:</strong> ManduA61@gmail.com</p>
+        <p id="telefon"><strong>Telefon:</strong> 0729105042</p>
+      </div>
+        
+      <div class="social-media">
+        <h2 >Social media</h2>
+        <img id="facebook-image" src="https://image.flaticon.com/icons/png/512/33/33702.png">
+        <a class="facebook-link" href="https://www.facebook.com/alexandru.mandu">Alexandru Mandu</a>
+        <img class="instagram-image" src="https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Instagram-Logo.png?resize=300%2C300">
+        <a class="instagram-link" href="#">MAM</a>
+      </div>
+        <!-- caracterul special de copyright -->
+        <p id="copyright"> &copy; MAM company</p>
+      <!-- tag-ul button, spre deosebire de input, mai intai se deschide, apoi se inchide -->
+    </footer>
+
+    <script>js/script.js</script>
+</body>
+</html>
